@@ -19,5 +19,20 @@
 
 Hello World
 
+<br><br><br>
+
+{{ text }}
+
+
+<br><br><br><br>
+
+{% for poll in polls %}
+    {{ poll.name }}
+    {% for question in poll.question_set.all %}
+        <br> - {{ question }}
+    {% endfor %}
+{% endfor %}
+
+
 </body>
 </html>
